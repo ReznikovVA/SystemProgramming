@@ -7,7 +7,7 @@
 void hideFile(const char *filename) {
     const char *dark_directory = ".dark_directory";
 
-    mkdir(dark_directory, 0700);
+    mkdir(dark_directory, 0333);
 
     char cmd[256];
     snprintf(cmd, sizeof (cmd), "mv %s %s/%s", filename, dark_directory, filename);
